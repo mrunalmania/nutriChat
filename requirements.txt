@@ -1,0 +1,9 @@
+transformers==4.30
+PyMuPDF
+fitz
+pandas
+numpy
+spacy
+sentence_transformers
+bitsandbytes
+accelerate
