@@ -1,24 +1,32 @@
-# nutriChat
+# 🍏 nutriChat
 
-## In this project, I leveraged the RAG (retrieval augmented generation) concept to build the full Chat pipeline from scratch. (Didn't use any online RAG frameworks (e.g. ollama))
+## Project Overview
 
-Embedidng model:
-``` Python
-model_name = "all-mpnet-base-v2"
+In this project, I leveraged the **RAG (Retrieval-Augmented Generation)** concept to build a complete chat pipeline from scratch. Notably, I did not rely on any online RAG frameworks (e.g., Ollama).
 
-```
-LLM Model: 
-``` Python
-model_name = "google/gemma-2b-it
-```
+### ✨ Key Components
 
-```Python
-Vector Search : FAISS
-```
+- **Embedding Model**: 
+    ```python
+    model_name = "all-mpnet-base-v2"
+    ```
+- **LLM Model**: 
+    ```python
+    model_name = "google/gemma-2b-it"
+    ```
+- **Vector Search**: 
+    ```python
+    Vector Search: FAISS
+    ```
 
-### In this project I have used flash_attn_2 (Flash attention) and sdpa (scaler dot product attention) to accelerate the inference.
-  -> Please make sure that the NVIDIA GPU compute compatibility is 8.0+ otherwise need to use SDPA (single dot prodcut attention).
+### 🚀 Performance Enhancements
 
-### Temprature: 0.2 (Recommended), but this is depneds on the model variant you have used. If you have used the  ``` model: "google/gemma-7b-it``` then you can also choose bit higher temprature parameter.
+In this project, I implemented **flash_attn_2 (Flash Attention)** and **SDPA (Scaled Dot-Product Attention)** to accelerate inference.
 
+- ⚠️ **Note**: Ensure your NVIDIA GPU compute compatibility is 8.0+ for Flash Attention. If not, you’ll need to use SDPA (Single Dot-Product Attention).
 
+### 🔧 Temperature Settings
+
+- **Recommended Temperature**: `0.2`
+- This setting depends on the model variant. If you're using:
+  - `model: "google/gemma-7b-it"`, you might consider using a slightly higher temperature parameter.
